@@ -4,7 +4,7 @@ title: Your Name | Freelance Data Analyst & Machine Learning Engineer
 ---
 
 <div style="text-align:center; padding:60px 20px;">
-  <h1>Hi, I'm **Braden Bourgeois**</h1>
+  <h1>Hi, I'm Braden Bourgeois</h1>
   <h2>Master's in Analytics | Predictive Modeling & Dashboard Specialist</h2>
   <p>I help businesses reduce churn, optimize portfolios, and make smarter decisions with data.</p>
 
