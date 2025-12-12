@@ -1,0 +1,7 @@
+# Option A – Clean & modern (my favorite for analysts)
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+title: Braden Bourgeois – Freelance Analytics
+description: Predictive modeling, churn reduction, and portfolio optimization for businesses
