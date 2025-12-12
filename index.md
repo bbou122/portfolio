@@ -39,10 +39,15 @@ Open-source contributor · 100% client satisfaction on early projects
 Drop me a message for a free 30-minute data audit:  
 [braden.bourg@gmail.com](mailto:braden.bourg@gmail.com) · [linkedin.com/in/the-braden-bourgeois/](https://www.linkedin.com/in/the-braden-bourgeois/)
 
+<form action="https://formspree.io/f/your-code-here" method="POST">
+  <input type="text" name="name" placeholder="Your name" required><br><br>
+  <input type="email" name="email" placeholder="Your email" required><br><br>
+  <textarea name="message" placeholder="Tell me about your project" required></textarea><br><br>
+  <button type="submit" style="padding:10px 20px; background:#0066cc; color:white; border:none; border-radius:6px;">Send</button>
+</form>
+
 <div style="text-align:center; margin-top:40px;">
   <small>© 2025 Braden Bourgeois. Built with GitHub Pages.</small>
 </div>
 
-<div style="text-align:center; margin-top:40px;">
-  <small>© 2025 Your Name. Built with GitHub Pages.</small>
-</div>
+
