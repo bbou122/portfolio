@@ -2,7 +2,7 @@
 
 Personal portfolio site for **Braden Bourgeois**, M.S. in Analytics (Louisiana State University).
 
-🔗 **Live site: [bbou122.github.io](https://bbou122.github.io)**
+🔗 **Live site: [bbou122.github.io](https://bbou122.github.io/github.io/)**
 
 ## About
 
