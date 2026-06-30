@@ -3,201 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Braden Bourgeois — Data Analytics Portfolio</title>
-<meta name="description" content="Data analytics portfolio of Braden Bourgeois, LSU M.S. in Analytics. SQL, Python, data pipelines, dashboards, and end-to-end analytics projects.">
+<title>Braden Bourgeois — Data Analytics & AI Portfolio</title>
+<meta name="description" content="Portfolio of Braden Bourgeois — M.S. Analytics (LSU). Data analyst building AI tools, data pipelines, and dashboards that support business decisions.">
 <style>
   :root{
-    --bg:#0c1424;
-    --bg-2:#101c33;
-    --panel:#13213b;
-    --panel-2:#172843;
-    --line:#23375c;
-    --text:#e8eef9;
-    --muted:#9fb0cc;
-    --muted-2:#7589a8;
-    --accent:#36c8c0;
-    --accent-2:#5b8cff;
-    --accent-grad:linear-gradient(135deg,#36c8c0 0%,#5b8cff 100%);
-    --shadow:0 18px 40px -20px rgba(0,0,0,.65);
-    --radius:18px;
+    /* LSU purple & gold over a dark base */
+    --bg:#140d22;
+    --bg-2:#1a1230;
+    --panel:#201838;
+    --panel-2:#281e44;
+    --line:#33285a;
+    --line-2:#43356f;
+    --text:#ece8f4;
+    --muted:#a99fc4;
+    --muted-2:#857aa3;
+    --purple:#7c5cc4;
+    --purple-d:#461d7c;
+    --gold:#fdd023;
+    --gold-d:#e3b81c;
+    --shadow:0 20px 46px -28px rgba(0,0,0,.8);
+    --radius:16px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  .accent-text{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 
   /* NAV */
-  nav{
-    position:sticky;top:0;z-index:50;
-    backdrop-filter:blur(12px);
-    background:rgba(12,20,36,.82);
-    border-bottom:1px solid var(--line);
-  }
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(20,13,34,.82);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-weight:700;letter-spacing:.3px;font-size:1.05rem}
-  .brand span{color:var(--accent)}
-  .nav-links{display:flex;gap:30px;font-size:.92rem}
+  .brand{font-weight:800;font-size:1.05rem}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:28px;font-size:.92rem}
   .nav-links a{color:var(--muted);transition:color .2s}
   .nav-links a:hover{color:var(--text)}
-  .nav-cta{
-    border:1px solid var(--line);padding:8px 16px;border-radius:999px;
-    color:var(--text);font-size:.88rem;transition:all .2s;background:var(--panel)
-  }
-  .nav-cta:hover{border-color:var(--accent);color:var(--accent)}
-  @media(max-width:720px){.nav-links{display:none}}
+  .nav-cta{border:1px solid var(--line-2);padding:8px 16px;border-radius:8px;color:var(--text);font-size:.88rem;font-weight:600;transition:all .2s;background:var(--panel)}
+  .nav-cta:hover{border-color:var(--gold);color:var(--gold)}
+  @media(max-width:760px){.nav-links{display:none}}
 
   /* HERO */
-  header.hero{
-    position:relative;
-    padding:110px 0 90px;
-    background:
-      radial-gradient(900px 500px at 80% -10%,rgba(91,140,255,.16),transparent 60%),
-      radial-gradient(700px 480px at 5% 10%,rgba(54,200,192,.13),transparent 55%);
-    overflow:hidden;
-  }
-  .hero-grid{
-    position:absolute;inset:0;
-    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:46px 46px;
-    opacity:.18;
-    mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%);
-  }
+  header.hero{position:relative;padding:104px 0 84px;overflow:hidden;
+    background:radial-gradient(820px 480px at 80% -10%,rgba(124,92,196,.30),transparent 60%),radial-gradient(560px 420px at 4% 6%,rgba(253,208,35,.07),transparent 58%)}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:50px 50px;opacity:.16;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 76%)}
   .hero-inner{position:relative}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--accent);font-weight:600;
-    border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:var(--panel);
-    margin-bottom:26px;
-  }
-  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(54,200,192,.18)}
-  h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.05;font-weight:800;letter-spacing:-1.5px}
-  .hero p.lead{
-    margin-top:22px;max-width:640px;font-size:1.18rem;color:var(--muted);
-  }
-  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;
-    padding:13px 24px;border-radius:12px;font-weight:600;font-size:.95rem;
-    transition:transform .15s ease,box-shadow .2s ease,border-color .2s;
-  }
-  .btn-primary{background:var(--accent-grad);color:#06121f;box-shadow:0 12px 30px -10px rgba(54,200,192,.6)}
-  .btn-primary:hover{transform:translateY(-2px)}
-  .btn-ghost{border:1px solid var(--line);color:var(--text);background:var(--panel)}
-  .btn-ghost:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;border:1px solid var(--line-2);border-radius:999px;padding:6px 15px;background:var(--panel);margin-bottom:26px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  h1{font-size:clamp(2.3rem,5.6vw,3.7rem);line-height:1.08;font-weight:800;letter-spacing:-1.3px}
+  h1 .accent{color:var(--gold)}
+  .hero p.lead{margin-top:22px;max-width:640px;font-size:1.14rem;color:var(--muted)}
+  .hero p.lead strong{color:var(--text);font-weight:600}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:10px;font-weight:600;font-size:.95rem;transition:transform .15s,border-color .2s,background .2s}
+  .btn-primary{background:var(--gold);color:#2a1a05}
+  .btn-primary:hover{background:var(--gold-d);transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line-2);color:var(--text);background:var(--panel)}
+  .btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:52px;padding-top:34px;border-top:1px solid var(--line)}
+  .hero-stats .num{font-size:1.85rem;font-weight:800;letter-spacing:-.5px;color:var(--gold)}
+  .hero-stats .lbl{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
 
-  .hero-stats{
-    display:flex;flex-wrap:wrap;gap:38px;margin-top:54px;
-    padding-top:34px;border-top:1px solid var(--line);
-  }
-  .hero-stats .stat .num{font-size:1.9rem;font-weight:800;letter-spacing:-1px}
-  .hero-stats .stat .lbl{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
-
-  /* SECTION */
   section{padding:84px 0;position:relative}
-  .sec-head{margin-bottom:46px;max-width:680px}
-  .sec-tag{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-1px;margin-top:10px}
-  .sec-head p{color:var(--muted);margin-top:14px;font-size:1.05rem}
+  .band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{margin-bottom:46px;max-width:720px}
+  .sec-tag{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .sec-head h2{font-size:clamp(1.8rem,3.8vw,2.4rem);font-weight:800;letter-spacing:-1px;margin-top:11px}
+  .sec-head p{color:var(--muted);margin-top:13px;font-size:1.05rem}
 
   /* ABOUT */
-  .about{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
-  @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:32px}}
+  .about-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:48px;align-items:start}
+  @media(max-width:840px){.about-grid{grid-template-columns:1fr;gap:32px}}
   .about p{color:var(--muted);font-size:1.06rem;margin-bottom:18px}
   .about p strong{color:var(--text);font-weight:600}
-  .edu-card{
-    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-    padding:26px;box-shadow:var(--shadow)
-  }
-  .edu-card h3{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .panel h3{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
   .edu-item{padding:14px 0;border-bottom:1px solid var(--line)}
   .edu-item:last-child{border-bottom:none;padding-bottom:0}
   .edu-item .deg{font-weight:700;font-size:1.02rem}
   .edu-item .school{color:var(--muted);font-size:.92rem}
-  .edu-item .meta{color:var(--accent);font-size:.84rem;margin-top:4px;font-weight:600}
+  .edu-item .meta{color:var(--purple);font-size:.83rem;margin-top:4px;font-weight:600}
+  .edu-item .meta b{color:var(--gold)}
 
   /* SKILLS */
-  .skill-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  @media(max-width:820px){.skill-groups{grid-template-columns:1fr}}
-  .skill-card{
-    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
-    transition:transform .2s,border-color .2s;
-  }
-  .skill-card:hover{transform:translateY(-4px);border-color:var(--accent)}
-  .skill-card .ic{font-size:1.5rem;margin-bottom:12px;display:block}
-  .skill-card h3{font-size:1.05rem;font-weight:700;margin-bottom:14px}
+  .skill-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media(max-width:900px){.skill-groups{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.skill-groups{grid-template-columns:1fr}}
+  .skill-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s,border-color .2s}
+  .skill-card:hover{transform:translateY(-4px);border-color:var(--purple)}
+  .skill-card .ic{font-size:1.4rem;margin-bottom:12px;display:block}
+  .skill-card h3{font-size:1.0rem;font-weight:700;margin-bottom:14px}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{
-    font-size:.82rem;background:var(--panel-2);border:1px solid var(--line);
-    color:var(--muted);padding:5px 11px;border-radius:8px;
-  }
+  .chip{font-size:.8rem;background:var(--panel-2);border:1px solid var(--line);color:var(--muted);padding:5px 11px;border-radius:7px}
 
   /* PROJECTS */
-  .projects{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .project{
-    display:grid;grid-template-columns:1fr 1fr;gap:0;
-    background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;
-    margin-bottom:34px;box-shadow:var(--shadow);
-  }
+  .project{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:34px;box-shadow:var(--shadow);transition:border-color .25s}
+  .project:hover{border-color:var(--line-2)}
   .project:last-child{margin-bottom:0}
-  @media(max-width:860px){.project{grid-template-columns:1fr}}
-  .project .visual{
-    position:relative;min-height:280px;padding:34px;
-    display:flex;flex-direction:column;justify-content:center;gap:18px;
-    border-right:1px solid var(--line);
-  }
-  @media(max-width:860px){.project .visual{border-right:none;border-bottom:1px solid var(--line);min-height:auto}}
-  .project.alt{direction:rtl}
-  .project.alt > *{direction:ltr}
-  .v-citi{background:linear-gradient(150deg,#0f2f3a,#13213b)}
-  .v-yoga{background:linear-gradient(150deg,#2a2140,#13213b)}
-  .v-meta{background:linear-gradient(150deg,#1d2a4d,#13213b)}
-  .v-emoji{font-size:2.4rem}
-  .v-metrics{display:flex;gap:26px;flex-wrap:wrap}
-  .v-metric .n{font-size:1.7rem;font-weight:800;letter-spacing:-.5px;background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .v-metric .l{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-  .project .body{padding:34px}
-  .project .tag{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .project h3{font-size:1.5rem;font-weight:800;margin:8px 0 14px;letter-spacing:-.5px}
-  .project p{color:var(--muted);font-size:1rem;margin-bottom:18px}
-  .stack{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+  .p-top{display:grid;grid-template-columns:1fr 1.05fr;gap:0}
+  @media(max-width:880px){.p-top{grid-template-columns:1fr}}
+  .p-visual{position:relative;min-height:230px;padding:32px;display:flex;flex-direction:column;justify-content:center;gap:20px;border-right:1px solid var(--line)}
+  @media(max-width:880px){.p-visual{border-right:none;border-bottom:1px solid var(--line);min-height:auto}}
+  .v-ai{background:linear-gradient(150deg,#3a2566,#201838)}
+  .v-citi{background:linear-gradient(150deg,#2c2356,#201838)}
+  .v-meta{background:linear-gradient(150deg,#352a5e,#201838)}
+  .v-yoga{background:linear-gradient(150deg,#2a2150,#201838)}
+  .p-badge{position:absolute;top:18px;right:18px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:rgba(253,208,35,.1);border:1px solid var(--line-2);padding:5px 11px;border-radius:999px}
+  .v-emoji{font-size:2.3rem}
+  .v-metrics{display:flex;gap:24px;flex-wrap:wrap}
+  .v-metric .n{font-size:1.6rem;font-weight:800;letter-spacing:-.5px;color:var(--gold)}
+  .v-metric .l{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+  .p-body{padding:32px}
+  .p-tag{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .p-body h3{font-size:1.45rem;font-weight:800;margin:8px 0 13px;letter-spacing:-.4px}
+  .p-body p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+  .stack{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 22px}
   .stack .chip{background:var(--panel-2)}
-  .project-links{display:flex;gap:12px;flex-wrap:wrap}
-  .plink{
-    display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:600;
-    padding:10px 16px;border-radius:10px;transition:all .18s
-  }
-  .plink.live{background:var(--accent-grad);color:#06121f}
-  .plink.live:hover{transform:translateY(-2px)}
-  .plink.code{border:1px solid var(--line);color:var(--text)}
-  .plink.code:hover{border-color:var(--accent);color:var(--accent)}
+  .p-links{display:flex;gap:11px;flex-wrap:wrap}
+  .plink{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:600;padding:10px 16px;border-radius:9px;transition:all .18s}
+  .plink.live{background:var(--gold);color:#2a1a05}
+  .plink.live:hover{background:var(--gold-d);transform:translateY(-2px)}
+  .plink.code{border:1px solid var(--line-2);color:var(--text)}
+  .plink.code:hover{border-color:var(--gold);color:var(--gold)}
+  .why-row{border-top:1px solid var(--line);padding:20px 32px;color:var(--muted);font-size:.97rem}
+  .why-row b{color:var(--text);font-weight:600}
+  .why-row .label{color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-right:8px}
+
+  /* WHAT I BRING */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:840px){.why-grid{grid-template-columns:1fr}}
+  .why-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s,border-color .2s}
+  .why-card:hover{transform:translateY(-4px);border-color:var(--purple)}
+  .why-card .ic{font-size:1.5rem;display:block;margin-bottom:14px}
+  .why-card h3{font-size:1.1rem;font-weight:700;margin-bottom:9px}
+  .why-card p{color:var(--muted);font-size:.96rem}
 
   /* CONTACT */
   .contact{text-align:center}
-  .contact .sec-head{margin:0 auto 40px}
-  .contact-card{
-    max-width:640px;margin:0 auto;background:var(--panel);border:1px solid var(--line);
-    border-radius:22px;padding:48px 34px;box-shadow:var(--shadow);
-    background-image:radial-gradient(600px 300px at 50% -20%,rgba(54,200,192,.12),transparent 60%);
-  }
-  .contact-card h2{font-size:2rem;font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+  .contact-card{max-width:640px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:48px 34px;box-shadow:var(--shadow);background-image:radial-gradient(560px 300px at 50% -25%,rgba(124,92,196,.25),transparent 62%)}
+  .contact-card h2{font-size:1.95rem;font-weight:800;letter-spacing:-.8px;margin-bottom:12px}
   .contact-card p{color:var(--muted);margin-bottom:28px}
-  .contact-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
 
-  footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:.88rem}
+  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted-2);font-size:.88rem}
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
 </style>
 </head>
@@ -210,6 +159,7 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#bring">What I bring</a>
       <a href="#contact">Contact</a>
     </div>
     <a class="nav-cta" href="#contact">Get in touch</a>
@@ -219,65 +169,64 @@
 <header class="hero">
   <div class="hero-grid"></div>
   <div class="wrap hero-inner">
-    <div class="eyebrow"><span class="dot"></span> M.S. Analytics · Louisiana State University</div>
-    <h1>I turn raw data into<br><span class="accent-text">decisions people can act on.</span></h1>
+    <div class="eyebrow"><span class="dot"></span> M.S. Analytics · Louisiana State University · Open to relocation</div>
+    <h1>Turning data into<br><span class="accent">clear, useful decisions.</span></h1>
     <p class="lead">
-      I'm Braden Bourgeois — a data analyst who builds end-to-end analytics:
-      from streaming pipelines over tens of millions of records to interactive dashboards
-      that make the story obvious. Below are three projects that show how I think with data.
+      I'm Braden Bourgeois — a data analyst who recently finished my M.S. in Analytics at LSU.
+      I like building things <strong>end to end</strong>, from cleaning raw data to shipping a dashboard or
+      tool someone can actually use. Here are a few projects I've put together.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#projects">View my work →</a>
-      <a class="btn btn-ghost" href="mailto:braden.bourg@gmail.com">Email me</a>
+      <a class="btn btn-primary" href="#projects">See my work →</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/the-braden-bourgeois/" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="num accent-text">35M+</div><div class="lbl">Records analyzed</div></div>
-      <div class="stat"><div class="num accent-text">3.89</div><div class="lbl">Grad GPA</div></div>
-      <div class="stat"><div class="num accent-text">3</div><div class="lbl">Live data projects</div></div>
-      <div class="stat"><div class="num accent-text">5+</div><div class="lbl">Tools &amp; languages</div></div>
+      <div class="stat"><div class="num">35M+</div><div class="lbl">Records analyzed</div></div>
+      <div class="stat"><div class="num">4</div><div class="lbl">Live projects</div></div>
+      <div class="stat"><div class="num">3.89</div><div class="lbl">Graduate GPA</div></div>
+      <div class="stat"><div class="num">M.S.</div><div class="lbl">Analytics, LSU</div></div>
     </div>
   </div>
 </header>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="band about" id="about">
   <div class="wrap">
     <div class="about-grid">
       <div class="reveal">
         <div class="sec-tag">About</div>
-        <div class="sec-head" style="margin-bottom:24px"><h2>Analytics-trained. Built to ship.</h2></div>
+        <div class="sec-head" style="margin-bottom:24px"><h2>A bit about me</h2></div>
         <p>
-          I recently completed my <strong>Master of Science in Analytics at Louisiana State University</strong>
-          (GPA 3.89), building on a B.S. in Business Analytics from the same program. My focus is the full
-          analytics lifecycle — sourcing and cleaning messy data, modeling it correctly, and presenting it so
-          a decision-maker understands it in seconds.
+          I hold a <strong>Master of Science in Analytics from Louisiana State University</strong> (GPA 3.89),
+          built on a B.S. in Business Analytics from the same program. I enjoy the full analytics process —
+          finding and cleaning messy data, analyzing it carefully, and presenting it so it's easy to understand
+          and act on.
         </p>
         <p>
-          I'm comfortable working at scale. One of the projects below processes <strong>35 million ride records</strong>
-          through a streaming Python pipeline; another reverse-engineers political and corporate ad spending across
-          Meta's entire ad library; a third is a full-stack, SQL-backed studio platform. Across all three I owned the
-          work from raw data to the polished, shareable result.
+          I learn best by building. The projects below cover a range of work: a conversational AI tool for
+          exploring data, a pipeline that handles <strong>35 million records</strong>, a dashboard over a national
+          ad-spending dataset, and a SQL-backed web application. Each one is live, so you can click in and try it.
         </p>
         <p>
-          I'm ready to bring that skill set to a team — <strong>open to relocation</strong> and excited to do
-          analytics work that actually moves the business.
+          I'm early in my career and looking for my first analytics role. I'm comfortable across data analysis,
+          data science, and data engineering, and I'm <strong>open to relocation</strong> for the right team.
         </p>
       </div>
-      <div class="edu-card reveal">
-        <h3>Education</h3>
+      <div class="panel reveal">
+        <h3>Education &amp; Credentials</h3>
         <div class="edu-item">
           <div class="deg">M.S., Analytics</div>
           <div class="school">Louisiana State University</div>
-          <div class="meta">GPA 3.89 · 2024–2025</div>
+          <div class="meta">GPA <b>3.89</b> · 2024–2025</div>
         </div>
         <div class="edu-item">
           <div class="deg">B.S., Business Analytics</div>
           <div class="school">Louisiana State University</div>
-          <div class="meta">GPA 3.68 · 2020–2023</div>
+          <div class="meta">GPA <b>3.68</b> · 2020–2023</div>
         </div>
         <div class="edu-item">
           <div class="deg">Excel Expert Certification</div>
-          <div class="school">Advanced spreadsheet &amp; modeling</div>
+          <div class="school">Advanced modeling &amp; analysis</div>
         </div>
       </div>
     </div>
@@ -289,42 +238,38 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-tag">Toolkit</div>
-      <h2>Programs &amp; skills I work with</h2>
-      <p>The languages, tools, and methods I reach for to take a project from raw data to a decision.</p>
+      <h2>Tools &amp; skills I work with</h2>
+      <p>The languages, platforms, and methods I use to take a project from raw data to a clear result.</p>
     </div>
     <div class="skill-groups">
       <div class="skill-card reveal">
-        <span class="ic">💻</span>
-        <h3>Languages &amp; Querying</h3>
+        <span class="ic">💻</span><h3>Languages</h3>
         <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Pandas</span>
-          <span class="chip">scikit-learn</span>
+          <span class="chip">Python</span><span class="chip">SQL</span>
+          <span class="chip">Pandas / NumPy</span><span class="chip">scikit-learn</span>
           <span class="chip">HTML / CSS / JS</span>
         </div>
       </div>
       <div class="skill-card reveal">
-        <span class="ic">📊</span>
-        <h3>Analytics &amp; Visualization</h3>
+        <span class="ic">🤖</span><h3>AI &amp; ML</h3>
         <div class="chips">
-          <span class="chip">Tableau</span>
-          <span class="chip">Looker</span>
-          <span class="chip">Excel (Expert)</span>
-          <span class="chip">Dashboards</span>
-          <span class="chip">Data Storytelling</span>
+          <span class="chip">LLM tools</span><span class="chip">Classification</span>
+          <span class="chip">Predictive modeling</span><span class="chip">Streamlit</span>
         </div>
       </div>
       <div class="skill-card reveal">
-        <span class="ic">⚙️</span>
-        <h3>Data &amp; Methods</h3>
+        <span class="ic">📊</span><h3>Analytics &amp; BI</h3>
         <div class="chips">
-          <span class="chip">BigQuery / GCP</span>
-          <span class="chip">ETL Pipelines</span>
-          <span class="chip">Forecasting &amp; Time Series</span>
-          <span class="chip">Statistical Modeling</span>
-          <span class="chip">A/B Testing</span>
-          <span class="chip">Data Cleaning</span>
+          <span class="chip">Tableau</span><span class="chip">Looker</span>
+          <span class="chip">Plotly</span><span class="chip">Excel (Expert)</span>
+          <span class="chip">Dashboards</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="ic">⚙️</span><h3>Data Engineering</h3>
+        <div class="chips">
+          <span class="chip">BigQuery / GCP</span><span class="chip">ETL pipelines</span>
+          <span class="chip">Forecasting</span><span class="chip">A/B testing</span>
         </div>
       </div>
     </div>
@@ -332,110 +277,194 @@
 </section>
 
 <!-- PROJECTS -->
-<section class="projects" id="projects">
+<section class="band" id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-tag">Featured work</div>
-      <h2>Three projects, end to end</h2>
-      <p>Each one is live — click through and explore the real, interactive result.</p>
+      <h2>A few projects I've built</h2>
+      <p>Each one is live and interactive — and each connects to a problem a real team would care about.</p>
+    </div>
+
+    <!-- AUTOINSIGHT -->
+    <div class="project reveal">
+      <div class="p-top">
+        <div class="p-visual v-ai">
+          <span class="p-badge">AI Tool</span>
+          <span class="v-emoji">🤖</span>
+          <div class="v-metrics">
+            <div class="v-metric"><div class="n">99,441</div><div class="l">Orders analyzed</div></div>
+            <div class="v-metric"><div class="n">Plain English</div><div class="l">Question → answer</div></div>
+            <div class="v-metric"><div class="n">No API keys</div><div class="l">Runs free</div></div>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">AI Data Tool · Python</div>
+          <h3>AutoInsight — Conversational AI Data Analyst</h3>
+          <p>
+            A tool that lets anyone ask a dataset questions in plain English and get back an answer, a chart, and a
+            table. It interprets the question, runs the analysis, and double-checks its own calculations before
+            showing a result. It works without any paid API keys thanks to a deterministic question router, with an
+            optional language-model layer for nicer wording.
+          </p>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Plotly</span>
+            <span class="chip">Streamlit</span><span class="chip">NL question routing</span>
+          </div>
+          <div class="p-links">
+            <a class="plink live" href="https://autoinsight-pzhffkyupktlcevo2xbk32.streamlit.app/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a class="plink code" href="https://github.com/bbou122/autoinsight" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="why-row"><span class="label">Why it matters</span> <b>Self-serve analytics:</b> it lets non-technical teammates get quick answers from data on their own, instead of waiting on an analyst for every routine question.</div>
     </div>
 
     <!-- CITI BIKE -->
     <div class="project reveal">
-      <div class="visual v-citi">
-        <span class="v-emoji">🚲</span>
-        <div class="v-metrics">
-          <div class="v-metric"><div class="n">35.1M</div><div class="l">Trips analyzed</div></div>
-          <div class="v-metric"><div class="n">6.8&nbsp;GB</div><div class="l">Raw data streamed</div></div>
-          <div class="v-metric"><div class="n">12 mo</div><div class="l">Full-year scope</div></div>
+      <div class="p-top">
+        <div class="p-visual v-citi">
+          <span class="p-badge">Data Pipeline</span>
+          <span class="v-emoji">🚲</span>
+          <div class="v-metrics">
+            <div class="v-metric"><div class="n">35.1M</div><div class="l">Trips processed</div></div>
+            <div class="v-metric"><div class="n">6.8 GB</div><div class="l">Streamed in-memory</div></div>
+            <div class="v-metric"><div class="n">12 mo</div><div class="l">Full-year scope</div></div>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Data Engineering · Python</div>
+          <h3>NYC Citi Bike 2023 — Ridership Analysis</h3>
+          <p>
+            A streaming Python pipeline that processed all 35.1 million Citi Bike trips of 2023 — 6.8 GB of nested
+            ZIP/CSV data — entirely in memory, without writing the raw files to disk. The result is a single,
+            self-contained dashboard showing commuter patterns, a strong summer demand peak, and the shift toward
+            electric bikes over the year.
+          </p>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">Streaming ETL</span>
+            <span class="chip">Data viz</span><span class="chip">HTML / JS</span>
+          </div>
+          <div class="p-links">
+            <a class="plink live" href="https://bbou122.github.io/CitiBike/" target="_blank" rel="noopener">Live dashboard ↗</a>
+            <a class="plink code" href="https://github.com/bbou122/CitiBike" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
         </div>
       </div>
-      <div class="body">
-        <div class="tag">Data Pipeline · Python</div>
-        <h3>NYC Citi Bike 2023 Ridership Analysis</h3>
-        <p>
-          Built a streaming Python pipeline that processes all 35.1 million Citi Bike trips from 2023 —
-          6.8 GB of nested ZIP/CSV data — entirely in memory, never writing the raw files to disk. The result is a
-          single, dependency-free interactive dashboard surfacing commuter patterns, seasonality, and the
-          electric-bike transition (50% → 62% over the year).
-        </p>
-        <div class="stack">
-          <span class="chip">Python</span><span class="chip">Streaming ETL</span>
-          <span class="chip">Data Viz</span><span class="chip">HTML / JS</span>
-        </div>
-        <div class="project-links">
-          <a class="plink live" href="https://bbou122.github.io/CitiBike/" target="_blank" rel="noopener">Live dashboard ↗</a>
-          <a class="plink code" href="https://github.com/bbou122/CitiBike" target="_blank" rel="noopener">View code ↗</a>
-        </div>
-      </div>
+      <div class="why-row"><span class="label">Why it matters</span> <b>Demand planning:</b> the kind of usage-pattern analysis a transit or logistics team would use to plan supply — handled efficiently on a dataset large enough to trip up many tools.</div>
     </div>
 
     <!-- META AD -->
-    <div class="project alt reveal">
-      <div class="visual v-meta">
-        <span class="v-emoji">📈</span>
-        <div class="v-metrics">
-          <div class="v-metric"><div class="n">Top 200</div><div class="l">Advertisers ranked</div></div>
-          <div class="v-metric"><div class="n">6 views</div><div class="l">Interactive sections</div></div>
-          <div class="v-metric"><div class="n">50 states</div><div class="l">Geo intelligence</div></div>
+    <div class="project reveal">
+      <div class="p-top">
+        <div class="p-visual v-meta">
+          <span class="p-badge">BI Dashboard</span>
+          <span class="v-emoji">📈</span>
+          <div class="v-metrics">
+            <div class="v-metric"><div class="n">Top 200</div><div class="l">Advertisers ranked</div></div>
+            <div class="v-metric"><div class="n">50</div><div class="l">States mapped</div></div>
+            <div class="v-metric"><div class="n">6</div><div class="l">Interactive views</div></div>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Dashboards · Analysis</div>
+          <h3>Meta Ad Library Intelligence Dashboard</h3>
+          <p>
+            An interactive dashboard over Meta's political and social-issue ad library. It ranks the top 200
+            advertisers by spend, maps spending across all 50 states, and breaks down advertising strategy —
+            turning a large public dataset into a clear, explorable picture of who's spending and where.
+          </p>
+          <div class="stack">
+            <span class="chip">Data analysis</span><span class="chip">Geo analytics</span>
+            <span class="chip">Dashboards</span><span class="chip">HTML / JS</span>
+          </div>
+          <div class="p-links">
+            <a class="plink live" href="https://bbou122.github.io/Meta-Ad-Insights/" target="_blank" rel="noopener">Live dashboard ↗</a>
+            <a class="plink code" href="https://github.com/bbou122/Meta-Ad-Insights" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
         </div>
       </div>
-      <div class="body">
-        <div class="tag">Dashboard · Intelligence</div>
-        <h3>Meta Ad Library Intelligence Dashboard</h3>
-        <p>
-          An interactive intelligence dashboard over Meta's political and social-issue ad library. It ranks the
-          top advertisers by spend, exposes "astroturf" front groups via disclaimer data, maps spend across all
-          50 states, and breaks down volume-vs-targeted ad strategy. A deep dive into where political and corporate
-          money really flows online.
-        </p>
-        <div class="stack">
-          <span class="chip">Data Analysis</span><span class="chip">Dashboards</span>
-          <span class="chip">Geo Analytics</span><span class="chip">HTML / JS</span>
-        </div>
-        <div class="project-links">
-          <a class="plink live" href="https://bbou122.github.io/Meta-Ad-Insights/" target="_blank" rel="noopener">Live dashboard ↗</a>
-        </div>
-      </div>
+      <div class="why-row"><span class="label">Why it matters</span> <b>Competitive insight:</b> similar to how a marketing team benchmarks competitor spend and decides where to focus its own budget.</div>
     </div>
 
-    <!-- YOGA SQL -->
+    <!-- YOGA -->
     <div class="project reveal">
-      <div class="visual v-yoga">
-        <span class="v-emoji">🧘</span>
-        <div class="v-metrics">
-          <div class="v-metric"><div class="n">Full-stack</div><div class="l">SQL-backed app</div></div>
-          <div class="v-metric"><div class="n">3 roles</div><div class="l">Member · Instructor · Admin</div></div>
-          <div class="v-metric"><div class="n">Live</div><div class="l">Booking &amp; dashboards</div></div>
+      <div class="p-top">
+        <div class="p-visual v-yoga">
+          <span class="p-badge">SQL · Full-Stack</span>
+          <span class="v-emoji">🧘</span>
+          <div class="v-metrics">
+            <div class="v-metric"><div class="n">3 roles</div><div class="l">Member · Instructor · Admin</div></div>
+            <div class="v-metric"><div class="n">Live</div><div class="l">Booking flow</div></div>
+            <div class="v-metric"><div class="n">Relational</div><div class="l">Schema-driven</div></div>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Database Design · Full-Stack</div>
+          <h3>ZenFlow — Yoga Studio Management Platform</h3>
+          <p>
+            A working studio-management app built on a clean relational data model: class scheduling, membership and
+            package purchases, role-based portals for members and instructors, personal dashboards, and a live
+            booking flow. It shows how a well-designed schema can support a real, multi-user product.
+          </p>
+          <div class="stack">
+            <span class="chip">SQL</span><span class="chip">Database design</span>
+            <span class="chip">Full-stack</span><span class="chip">HTML / JS</span>
+          </div>
+          <div class="p-links">
+            <a class="plink live" href="https://bbou122.github.io/SQL-Yoga-Functional/" target="_blank" rel="noopener">Live site ↗</a>
+            <a class="plink code" href="https://github.com/bbou122/SQL-Yoga-Functional" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
         </div>
       </div>
-      <div class="body">
-        <div class="tag">SQL · Full-Stack</div>
-        <h3>ZenFlow — Yoga Studio Management Platform</h3>
-        <p>
-          A working studio-management application driven by a relational data model: class scheduling, membership
-          and package purchases, role-based portals for members and instructors, personal dashboards, and a live
-          booking flow. Demonstrates database design and how a clean schema powers a real, multi-user product.
-        </p>
-        <div class="stack">
-          <span class="chip">SQL</span><span class="chip">Database Design</span>
-          <span class="chip">Full-Stack</span><span class="chip">HTML / JS</span>
-        </div>
-        <div class="project-links">
-          <a class="plink live" href="https://bbou122.github.io/SQL-Yoga-Functional/" target="_blank" rel="noopener">Live site ↗</a>
-        </div>
-      </div>
+      <div class="why-row"><span class="label">Why it matters</span> <b>Operations:</b> the kind of system a small business runs on day to day — automating bookings, memberships, and payments that would otherwise be manual.</div>
     </div>
 
   </div>
 </section>
 
+<!-- WHAT I BRING -->
+<section id="bring">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">What I bring</div>
+      <h2>How I like to work</h2>
+      <p>Still early in my career, but already building work that resembles the real job.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="ic">🚀</span><h3>I work end to end</h3>
+        <p>From raw, messy source data to a working, deployed result. The projects here are live, not notebooks sitting in a folder.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="ic">🎯</span><h3>I keep the goal in mind</h3>
+        <p>I try to connect each analysis to a decision someone needs to make, so the work is useful rather than just technically correct.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="ic">🔍</span><h3>I care about getting it right</h3>
+        <p>I build in checks — my pipelines reconcile their totals and my AI tool re-verifies its calculations — because trustworthy data is the point.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="ic">🧠</span><h3>I pick things up quickly</h3>
+        <p>I'm comfortable across analysis, data science, and engineering, and I enjoy learning a new tool or domain when a project calls for it.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="ic">🤝</span><h3>I'm practical about AI</h3>
+        <p>I use modern AI tools where they genuinely help, and I'm mindful of where they need guardrails rather than treating them as magic.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="ic">📈</span><h3>Solid foundation</h3>
+        <p>An M.S. in Analytics (3.89 GPA) plus a business-analytics undergrad gave me real grounding in statistics, forecasting, and modeling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="band contact" id="contact">
   <div class="wrap">
     <div class="contact-card reveal">
-      <h2>Let's talk data.</h2>
-      <p>I'm actively looking for analytics roles and open to relocation. The fastest way to reach me is email.</p>
+      <h2>Let's connect.</h2>
+      <p>I'm looking for my first analytics role and I'm open to relocation. Email or LinkedIn both work well.</p>
       <div class="contact-actions">
         <a class="btn btn-primary" href="mailto:braden.bourg@gmail.com">braden.bourg@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/the-braden-bourgeois/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -446,14 +475,13 @@
 </section>
 
 <footer>
-  <div class="wrap">© 2026 Braden Bourgeois · Data Analytics Portfolio · Metairie, LA (open to relocation)</div>
+  <div class="wrap">© 2026 Braden Bourgeois · Data Analytics &amp; AI Portfolio · Metairie, LA (open to relocation)</div>
 </footer>
 
 <script>
-  // scroll reveal
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
-  },{threshold:.12});
+  },{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
