@@ -3,7 +3,7 @@
 Personal portfolio site for **Braden Bourgeois**, M.S. in Analytics (Louisiana State University).
 Data analyst, aspiring data scientist, and analytics engineer who ships end-to-end.
 
-🔗 **Live site: [bbou122.github.io](https://bbou122.github.io)**
+🔗 **Live site: [bbou122.github.io](https://bbou122.github.io/portfolio/)**
 
 ## Featured projects
 
